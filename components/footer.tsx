@@ -4,7 +4,7 @@ export function Footer() {
       <div className="section-shell">
         <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <p className="text-sm text-muted-foreground">
-            &copy; 2025 nxtcorex cloud
+            &copy; 2025 nxtcorex
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
