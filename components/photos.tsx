@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Photo } from "@/types";
 import {
@@ -6,12 +8,25 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useEffect } from "react";
+import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 interface PhotosProps {
   photos: Photo[];
 }
 
 export function Photos({ photos }: PhotosProps) {
+  useEffect(() => {
+    NativeFancybox.bind("[data-fancybox='gallery']", {
+      // Fancybox options
+    });
+
+    return () => {
+      NativeFancybox.destroy();
+    };
+  }, []);
+
   return (
     <section id="photos" className="border-b border-border py-20 sm:py-24">
       <div className="section-shell">
@@ -32,15 +47,22 @@ export function Photos({ photos }: PhotosProps) {
               key={photo.id}
               className="group overflow-hidden border-border bg-card transition-colors hover:bg-muted/40"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-border bg-muted">
-                <Image
-                  src={photo.imageUrl}
-                  alt={photo.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
+              <a
+                href={photo.imageUrl}
+                data-fancybox="gallery"
+                data-caption={`${photo.title} - ${photo.description}`}
+                className="block"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-border bg-muted cursor-pointer">
+                  <Image
+                    src={photo.imageUrl}
+                    alt={photo.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              </a>
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between gap-2">
                   <CardTitle className="text-base font-semibold leading-6">{photo.title}</CardTitle>
