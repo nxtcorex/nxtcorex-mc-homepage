@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "nxtcorex mc",
   description: "nxtcorex mc - Minecraft服务器官方网站",
   icons: {
-    icon: "/nxtcorex-mc.png",
+    icon: "https://www.nxtcorex.cn/img/logo_c.webp",
   },
 };
 

@@ -69,7 +69,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
             <span className="flex size-8 items-center justify-center rounded-md border border-border bg-card">
               <Image
-                src="/nxtcorex-mc.png"
+                src="https://www.nxtcorex.cn/img/logo_c.webp"
                 alt="nxtcorex logo"
                 width={22}
                 height={22}

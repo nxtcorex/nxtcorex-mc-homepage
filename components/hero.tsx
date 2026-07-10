@@ -10,7 +10,7 @@ export function Hero() {
       <div className="section-shell flex min-h-[100svh] flex-col items-center justify-center py-28 text-center sm:py-32">
         <div className="mb-6 flex items-center justify-center">
           <Image
-            src="/nxtcorex-mc.png"
+            src="https://www.nxtcorex.cn/img/logo_c.webp"
             alt="nxtcorex mc"
             width={64}
             height={64}
@@ -45,7 +45,7 @@ export function Hero() {
               <Server className="size-4" />
               服务器地址
             </div>
-            <p className="font-mono text-sm text-muted-foreground">mc.fishcpy.top</p>
+            <p className="font-mono text-sm text-muted-foreground">mc.nxtcorex.cn</p>
           </div>
           <div className="p-4">
             <div className="mb-2 flex items-center gap-2 text-sm font-medium">

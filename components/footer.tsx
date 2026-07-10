@@ -7,6 +7,14 @@ export function Footer() {
             &copy; 2025 nxtcorex
           </p>
           <div className="flex gap-6">
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              京ICP备2025138063号-2
+            </a>
             <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               隐私政策
             </a>
