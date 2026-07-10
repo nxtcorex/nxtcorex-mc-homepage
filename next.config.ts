@@ -1,19 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'file.fis.ink',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'blogpng.fishcpy.top',
-        pathname: '/**',
-      },
-    ],
+    unoptimized: true,
   },
 };
 
